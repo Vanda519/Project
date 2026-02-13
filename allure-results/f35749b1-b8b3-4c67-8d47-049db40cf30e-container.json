@@ -1,0 +1,1 @@
+{"uuid":"f35749b1-b8b3-4c67-8d47-049db40cf30e","name":"ui.UITest_LoginInvalid.setup","children":["c29d8721-c823-4dd3-82e1-ad561b9a8c7c"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1770884066402,"stop":1770884071633}],"afters":[],"start":1770884066401,"stop":1770884071634}

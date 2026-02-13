@@ -1,0 +1,1 @@
+{"uuid":"940fd4e0-cda8-40b7-a8f0-db0f944765ff","name":"ui.UITest_VerifyCasesPage.setup","children":["f7994a7f-e11e-4734-85a3-872741f309a3"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1770921655777,"stop":1770921662302}],"afters":[],"start":1770921655776,"stop":1770921662304}
