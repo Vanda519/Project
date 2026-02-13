@@ -25,7 +25,7 @@ public class ApiTest_Subscription {
                 .extract()
                 .response();
 
-        // Verify 200 status
+
         Assert.assertEquals(response.getStatusCode(), 200);
 
         System.out.println("Response: " + response.getBody().asString());

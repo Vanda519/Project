@@ -37,15 +37,15 @@ public class UITest_VerifyCasesPage {
     @Test
     public void verifyTestCasesPage() {
 
-        // 1️⃣ Verify home page
+
         WebElement homeSlider = waitForElementVisible(By.id("slider"), 10);
         Assert.assertTrue(homeSlider.isDisplayed(), "Home page is not visible");
 
-        // 2️⃣ Click Test Cases
+
         WebElement testCasesButton = waitForElementClickable(By.linkText("Test Cases"), 10);
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", testCasesButton);
 
-        // 3️⃣ Verify navigation
+
         WebElement testCasesHeader = waitForElementVisible(
                 By.xpath("//h2[text()='Test Cases']"), 10);
 
@@ -53,11 +53,11 @@ public class UITest_VerifyCasesPage {
         Assert.assertTrue(driver.getCurrentUrl().contains("/test_cases"),
                 "URL does not contain '/test_cases'");
 
-        // 4️⃣ Scroll down slightly to show cases clearly
+
         ((JavascriptExecutor) driver)
                 .executeScript("window.scrollBy(0,400);");
 
-        // 5️⃣ Verify test cases list is visible
+
         WebElement testCasesList = waitForElementVisible(
                 By.className("panel-group"), 10);
 

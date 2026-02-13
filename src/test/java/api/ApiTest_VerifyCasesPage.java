@@ -12,10 +12,10 @@ public class ApiTest_VerifyCasesPage {
     @Test
     public void verifyTestCasesListAPI() {
 
-        // Base URI
+
         RestAssured.baseURI = "https://automationexercise.com";
 
-        // Send GET request
+
         Response response =
                 given()
                         .when()
@@ -24,18 +24,18 @@ public class ApiTest_VerifyCasesPage {
                         .extract()
                         .response();
 
-        // 1️⃣ Verify Status Code
+
         Assert.assertEquals(response.getStatusCode(), 200,
                 "Expected status code 200");
 
-        // 2️⃣ Print response
+
         System.out.println("Response Body:\n" + response.getBody().asString());
 
-        // 3️⃣ Verify response contains test cases
+
         Assert.assertTrue(response.getBody().asString().contains("test_cases"),
                 "Response does not contain test cases");
 
-        // 4️⃣ Optional: Verify count > 0
+
         int testCaseCount = response.jsonPath().getList("test_cases").size();
         Assert.assertTrue(testCaseCount > 0,
                 "Test cases list is empty");

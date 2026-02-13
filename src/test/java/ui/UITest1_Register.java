@@ -92,10 +92,10 @@ public class UITest1_Register {
         Assert.assertTrue(driver.findElement(
                 By.xpath("//b[text()='Account Created!']")).isDisplayed());
 
-        // 15️⃣ Click Continue
+
         driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
 
-        // 16️⃣ Verify Logged in
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//a[contains(text(),'Logged in as')]")));
         Assert.assertTrue(driver.findElement(
@@ -103,20 +103,20 @@ public class UITest1_Register {
 
         driver.findElement(By.xpath("//button[@data-qa='continue-button']")).click();
 
-        // Delete Account
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//a[contains(text(),'Delete Account')]"))).click();
 
-// Verify ACCOUNT DELETED
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//b[text()='Account Deleted!']")));
 
         Assert.assertTrue(driver.findElement(
                 By.xpath("//b[text()='Account Deleted!']")).isDisplayed());
 
-// Click Continue after delete
+
         driver.findElement(By.xpath("//a[@data-qa='continue-button']")).click();
 
         System.out.println("Account successfully created and deleted.");
-        // ❌ არ ვაკეთებთ Delete Account
+
     }}

@@ -37,34 +37,34 @@ public class UITest_AllProducts {
 
     @Test
     public void verifyAllProductsAndDetailPage() {
-        // 3. Verify that home page is visible
+
         WebElement homeSlider = waitForElementVisible(By.id("slider"), 10);
         Assert.assertTrue(homeSlider.isDisplayed(), "Home page is not visible");
 
-        // 4. Click on 'Products' button
+
         driver.findElement(By.cssSelector("a[href='/products']")).click();
 
-        // 5. Verify user is navigated to ALL PRODUCTS page
+
         WebElement allProductsHeader = waitForElementVisible(By.xpath("//h2[text()='All Products']"), 10);
         Assert.assertTrue(allProductsHeader.isDisplayed(), "All Products page is not visible");
         Assert.assertTrue(driver.getCurrentUrl().contains("/products"), "URL does not contain '/products'");
         System.out.println("Navigated to All Products page successfully");
 
-        // 6. Verify products list is visible
+
         List<WebElement> productList = driver.findElements(By.cssSelector(".product-image-wrapper"));
         Assert.assertTrue(productList.size() > 0, "Products list is not visible");
         System.out.println("Products list is visible, count: " + productList.size());
 
-        // 7. Click on 'View Product' of first product
+
         WebElement firstViewProduct = productList.get(0).findElement(By.linkText("View Product"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstViewProduct);
 
-        // 8. User is landed to product detail page
+
         WebElement productDetail = waitForElementVisible(By.cssSelector(".product-information"), 10);
         Assert.assertTrue(productDetail.isDisplayed(), "Product detail page is not visible");
         System.out.println("Product detail page is visible");
 
-        // 9. Verify product detail: name, category, price, availability, condition, brand
+
         Assert.assertTrue(waitForElementVisible(By.xpath("//h2"), 5).isDisplayed(), "Product name not visible");
         Assert.assertTrue(waitForElementVisible(By.xpath("//p[contains(text(),'Category')]"), 5).isDisplayed(), "Category not visible");
         Assert.assertTrue(waitForElementVisible(By.xpath("//span[@class='price']"), 5).isDisplayed(), "Price not visible");

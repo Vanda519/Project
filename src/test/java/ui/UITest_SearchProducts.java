@@ -36,32 +36,32 @@ public class UITest_SearchProducts {
     @Test
     public void verifySearchProduct() {
 
-        // 3. Verify Home page
+
         Assert.assertTrue(waitVisible(By.id("slider"), 10).isDisplayed());
 
-        // 4. Click Products
+
         driver.findElement(By.cssSelector("a[href='/products']")).click();
 
-        // 5. Verify ALL PRODUCTS page
+
         Assert.assertTrue(waitVisible(By.xpath("//h2[text()='All Products']"), 10).isDisplayed());
 
-        // 6. Enter product name and search
+
         String productName = "Colour Blocked Shirt – Sky Blue";
 
         waitVisible(By.id("search_product"), 10).sendKeys(productName);
         waitClickable(By.id("submit_search"), 10).click();
 
-        // 7. Verify SEARCHED PRODUCTS visible
+
         WebElement searchedHeader = waitVisible(
                 By.xpath("//h2[text()='Searched Products']"), 10);
 
         Assert.assertTrue(searchedHeader.isDisplayed());
 
-// Scroll down to results
+
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView(true);", searchedHeader);
 
-// 8. Verify related products visible
+
         List<WebElement> searchedProducts =
                 waitVisible(By.cssSelector(".features_items"), 10)
                         .findElements(By.cssSelector(".product-image-wrapper"));

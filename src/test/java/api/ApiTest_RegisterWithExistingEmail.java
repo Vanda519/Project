@@ -14,7 +14,7 @@ public class ApiTest_RegisterWithExistingEmail {
     @Test
     @Description("Attempt to register user with existing email")
     public void registerExistingEmailAPI() {
-        // Step 6-7: Send registration request with existing email
+
         Map<String, String> data = new HashMap<>();
         data.put("name", "Test User");
         data.put("email", "testuser123@test.com"); // already registered
@@ -27,7 +27,7 @@ public class ApiTest_RegisterWithExistingEmail {
 
         Allure.addAttachment("Register Existing Email Response", response.asPrettyString());
 
-        // Step 8: Verify error message
+
         Assert.assertEquals(response.getStatusCode(), 409, "Status code for existing email");
         Assert.assertTrue(response.asString().contains("Email Address already exist!"), "Error message visible");
     }
