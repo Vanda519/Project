@@ -8,7 +8,7 @@
 
 მოცემული პროექტი მოიცავს როგორც API ისე UI ტესტ ქეისებს  https://automationexercise.com პლატფორმისთვის
 
-დარწმუნდით რომ თქვენს კომპიუტერზე დაინსტალირებულია IntelliJ IDEA, Java, Chrome/Firefox(ტესტი გასაშვებად), Maven 
+დარწმუნდით რომ თქვენს კომპიუტერზე დაინსტალირებულია IntelliJ IDEA, Java, Chrome/Firefox(ტესტის გასაშვებად), Maven 
 
 ტესტის allure-ის რეპორტის წარმოებისთვის გახსენით Terminal და შეიყვანეთ შემდეგი ბრძანებები: mvn test, allure serve
 
