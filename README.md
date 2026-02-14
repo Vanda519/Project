@@ -1,4 +1,4 @@
-პროექტზე მუშაობდნენ: ვანდა გოგინაშვილი, ანასტასია მეშვილდიშვილი
+პროექტზე მუშაობდნენ: ვანდა გოგინაშვილი(22100475@ibsu.edu.ge), ანასტასია მეშვილდიშვილი(22100496@ibsu.edu.ge)
 
 ვანდა გოგინაშვილი მუშაობდა შემდეგ ტესტ ქეისებზე: 1.UITest1_Register, ApiTest_Register 2.UITest2_RegisterWithExistingEmail, ApiTest_RegisterWithExistingEmail 3.UITest3_LogOut, ApiTest_LogOut
 
